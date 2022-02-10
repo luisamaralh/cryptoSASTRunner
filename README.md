@@ -14,8 +14,17 @@ https://github.com/CryptoGuardOSS/cryptoguard
 - Clone this repository:
 
      `git clone https://github.com/luisamaralh/cryptoSASTRunner.git`
+     
+- Run build.sh to configure the environment:
+
+     `cd cryptoSASTRunner.git`
+     
+     `./build.sh`
+     
+- Run Docker container:
+     './run.sh'
   
-- Create folders to receive the Java and/or Android projects to be analyzed and the output folders:  
+<!-- - Create folders to receive the Java and/or Android projects to be analyzed and the output folders:  
 
      `cd cryptoSASTRunner/cryptoRunner`
      
@@ -35,8 +44,8 @@ https://github.com/CryptoGuardOSS/cryptoguard
 - Run docker container:
 
     `docker run -it -v ./cryptoRunner/results:/home/cryptoRunner/results -v ./cryptoRunner/projects:/home/cryptoRunner/projects -v ./cryptoRunner/script:/home/cryptoRunner/script --name cryptorunner cryptorunner:1.0`
-
-- There are for python scripts to execute the analysis:
+ -->
+- There are for python scripts to execute the analysis inside the Docker:
     - runnerExperiment.py (execute CogniCryptSAST on Java projects inside of `/home/cryptoRunner/projects/jars` folder)
     - runnerAndroidExperiment.py (execute CogniCryptSAST on Android projects inside of `/home/cryptoRunner/projects/apks` folder)
     - runnerCryptoGuard.py (execute CryptoGuard on Java projects inside of `/home/cryptoRunner/projects/jars` folder)
