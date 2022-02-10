@@ -17,7 +17,7 @@ https://github.com/CryptoGuardOSS/cryptoguard
      
 - Run build.sh to configure the environment:
 
-     `cd cryptoSASTRunner.git`
+     `cd cryptoSASTRunner`
      
      `./build.sh`
      
