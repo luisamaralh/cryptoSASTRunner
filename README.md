@@ -22,7 +22,8 @@ https://github.com/CryptoGuardOSS/cryptoguard
      `./build.sh`
      
 - Run Docker container:
-     './run.sh'
+     
+     `./run.sh`
   
 <!-- - Create folders to receive the Java and/or Android projects to be analyzed and the output folders:  
 
