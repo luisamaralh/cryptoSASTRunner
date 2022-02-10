@@ -1,0 +1,28 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# APK file
+*.apk
+
+# DS_Store
+*.DS_Store
+
+# no format files
+*
+!/**/
+!*.*
+
+# python virtualenv
+venv/
+
+# experiment's generated files
+experiments/
+
+# java output files
+target/
+
+# projects
+cryptoRunner/projects/
