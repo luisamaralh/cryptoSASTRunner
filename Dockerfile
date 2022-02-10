@@ -13,7 +13,7 @@ RUN apt-get -y install openjdk-8-jdk android-sdk build-essential python3.8 pytho
 
 ENV ANDROID_HOME=/usr/lib/android-sdk/
 RUN export ANDROID_HOME
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64/
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME 
 
 ENV PATH=$JAVA_HOME/bin:$PATH
