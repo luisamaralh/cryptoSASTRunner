@@ -12,20 +12,28 @@ https://github.com/CryptoGuardOSS/cryptoguard
 ## How to run
 
 - Clone this repository:
+
      `git clone https://github.com/luisamaralh/cryptoSASTRunner.git`
   
 - Create folders to receive the Java and/or Android projects to be analyzed and the output folders:  
-     `cd cryptoRunner`
+
+     `cd cryptoSASTRunner/cryptoRunner`
+     
      `mkdir -p projects/apks`
+     
      `mkdir -p projects/jars`
+     
      `mkdir -p results/cryptoAnalysisOutput`
+     
      `mkdir -p results/cryptoGuardOutput`
+     
      `cd ..`
 
 - Build docker image:
     `docker build -t cryptorunner:1.0 .`
 
 - Run docker container:
+
     `docker run -it -v ./cryptoRunner/results:/home/cryptoRunner/results -v ./cryptoRunner/projects:/home/cryptoRunner/projects -v ./cryptoRunner/script:/home/cryptoRunner/script --name cryptorunner cryptorunner:1.0`
 
 - There are for python scripts to execute the analysis:
