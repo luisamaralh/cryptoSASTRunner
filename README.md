@@ -17,7 +17,7 @@ https://github.com/CryptoGuardOSS/cryptoguard
   
 - Create folders to receive the Java and/or Android projects to be analyzed and the output folders:  
 
-     `cd cryptoRunner`
+     `cd cryptoSASTRunner/cryptoRunner`
      
      `mkdir -p projects/apks`
      
