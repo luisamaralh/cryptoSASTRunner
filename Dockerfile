@@ -9,11 +9,13 @@ RUN apt-get -y update
 
 WORKDIR /home
 
-RUN apt-get -y install openjdk-8-jdk android-sdk build-essential python3.8 python3.8-dev python3-pip 
+RUN apt-get -y install openjdk-17-jdk android-sdk build-essential python3.8 python3.8-dev python3-pip 
 
 ENV ANDROID_HOME=/usr/lib/android-sdk/
 RUN export ANDROID_HOME
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
+#ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-arm64/
+
 RUN export JAVA_HOME 
 
 ENV PATH=$JAVA_HOME/bin:$PATH
@@ -21,8 +23,8 @@ ENV PATH="${PATH}:${ANDROID_HOME}tools/:${ANDROID_HOME}platform-tools/:${ANDROID
 
 ADD ./cryptoRunner /home/cryptoRunner
 
-RUN chmod 0755 /home/*
-RUN chmod 0777 /home/cryptoRunner/results/* 
+RUN chmod -R 755 /home
+RUN chmod -R 777 /home/cryptoRunner/results
 
 WORKDIR /home/cryptoRunner/script
 
