@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
@@ -9,12 +9,12 @@ RUN apt-get -y update
 
 WORKDIR /home
 
-RUN apt-get -y install openjdk-17-jdk android-sdk build-essential python3.8 python3.8-dev python3-pip 
+RUN apt-get -y install openjdk-8-jdk openjdk-17-jdk android-sdk build-essential pipx 
 
 ENV ANDROID_HOME=/usr/lib/android-sdk/
 RUN export ANDROID_HOME
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
-#ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-arm64/
+# ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64/
 
 RUN export JAVA_HOME 
 
@@ -28,7 +28,7 @@ RUN chmod -R 777 /home/cryptoRunner/results
 
 WORKDIR /home/cryptoRunner/script
 
-RUN pip install -r requirements.txt
+RUN pipx install unicode
 
 # CMD python3 runnerAndroidExperiment.py 
 # CMD python3 runnerExperiment.py 
